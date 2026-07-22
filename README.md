@@ -29,8 +29,16 @@ the-gentle-conquest/
 │   ├── keywords.md              # Amazon keywords and SEO terms
 │   ├── categories.md            # Amazon categories and BISAC codes
 │   └── publishing-checklist.md  # Pre-launch, launch, and post-launch tasks
-├── build/                       # Build scripts and configuration (Phase 6)
-├── cover/                       # Cover images and assets (Phase 5)
+├── build/                       # Build scripts and configuration
+│   ├── build-ebook.sh           # Script to generate .epub and .mobi files
+│   ├── build-print.sh           # Script to generate print-ready PDFs
+│   ├── style.css                # EPUB stylesheet
+│   ├── BUILDING.md              # Build documentation
+│   └── output/                  # Generated files (after build)
+├── cover/                       # Cover images and assets
+│   ├── cover-specifications.md  # Detailed cover design specs
+│   ├── ai-prompts.md            # AI art generation prompts
+│   └── cover-ebook.jpg          # Your cover image (to be added)
 ├── editorial-audit.md           # Phase 1 deliverable: comprehensive audit
 ├── CHANGELOG.md                 # Project history and changes
 └── README.md                    # This file
@@ -52,24 +60,31 @@ the-gentle-conquest/
 - [x] Publishing checklist with pre-launch, launch, and post-launch tasks
 - [x] Build and cover directories with specifications
 
-### Phase 3: Manuscript Edit (Pending)
-- [ ] Final proofread
-- [ ] Address critical issues from audit
-- [ ] Style and consistency pass
+### Phase 3: Manuscript Edit ✅
+- [x] Final proofread
+- [x] Address critical issues from audit
+- [x] Style and consistency pass
 
-### Phase 4: Production (Pending)
-- [ ] Cover design
-- [ ] Interior formatting
-- [ ] eBook conversion
-- [ ] Print formatting
+### Phase 4: Production ✅
+- [x] Build system created (EPUB + PDF)
+- [x] EPUB stylesheet created
+- [x] Build documentation written
+- [ ] Cover artwork (awaiting your input)
 
-### Phase 5: Distribution (Pending)
-- [ ] ISBN assignment
-- [ ] KDP upload
-- [ ] IngramSpark upload (optional)
-- [ ] Direct sales setup (optional)
+### Phase 5: Cover Artwork (Pending)
+- [ ] Choose concept (see `cover/cover-specifications.md`)
+- [ ] Generate or commission artwork
+- [ ] Test at multiple sizes
+- [ ] Generate print wraps
 
-### Phase 6: Launch (Pending)
+### Phase 6: Distribution (Pending)
+- [ ] Install build tools (pandoc, calibre)
+- [ ] Build EPUB
+- [ ] Build PDF
+- [ ] Test on devices
+- [ ] Upload to KDP
+
+### Phase 7: Launch (Pending)
 - [ ] Pre-launch marketing
 - [ ] Launch day activities
 - [ ] Post-launch follow-up
@@ -79,9 +94,9 @@ the-gentle-conquest/
 ### Prerequisites
 
 - Git
-- Calibre (for ebook conversion)
-- Pandoc (for markdown to HTML/EPUB conversion)
-- LaTeX (for print PDF generation, optional)
+- Pandoc (for ebook conversion)
+- Calibre (optional, for MOBI conversion)
+- LaTeX (for print PDF generation)
 
 ### Installation
 
@@ -92,12 +107,15 @@ git clone https://github.com/Mattjhagen/the-gentle-conquest.git
 # Navigate to the project directory
 cd the-gentle-conquest
 
-# Install dependencies (if needed)
-# Note: Calibre, Pandoc, and LaTeX are system-level dependencies
-# Install them using your package manager
+# Install dependencies
+# Ubuntu/Debian
+sudo apt-get install pandoc calibre texlive-latex-recommended
+
+# macOS
+brew install pandoc calibre
 ```
 
-### Usage
+### Build
 
 ```bash
 # Build ebook
@@ -109,6 +127,23 @@ cd the-gentle-conquest
 # Build all
 ./build/build-all.sh
 ```
+
+### Add Cover
+
+1. Create or download cover artwork (1600x2560 pixels minimum)
+2. Save as `cover/cover-ebook.jpg`
+3. Rebuild ebook
+
+## Cover Artwork
+
+See `cover/cover-specifications.md` for detailed design specifications.
+
+See `cover/ai-prompts.md` for AI art generation prompts.
+
+**Recommended concept:** The Garden
+- A single human hand reaching toward a small green plant growing through a crack in a smooth, white, sterile surface
+- Color palette: Clean white, soft grey, vibrant green accent
+- Mood: Hope within sterility, human persistence, gentle resistance
 
 ## Contributing
 

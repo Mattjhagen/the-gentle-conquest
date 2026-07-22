@@ -13,20 +13,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Back matter with acknowledgments, about author, reading group guide
 - Publishing metadata, book description, keywords, categories
 - Publishing checklist with pre-launch, launch, and post-launch tasks
-- Build directory with README
-- Cover directory with specifications
+- Build directory with ebook and print build scripts
+- Cover directory with specifications and AI art prompts
+- EPUB stylesheet for ebook formatting
+- Build documentation (BUILDING.md)
 - README with project overview and getting started guide
 
 ### Changed
 - Manuscript chapters copied to `manuscript/chapters/` with standardized naming
 
 ### Fixed
-- Chinese character artifacts in chapters 13, 18, 26, 31, 32
-- Katherine Holt's age inconsistency across chapters
-- Ellie Finch's death timeline discrepancy
-- Marcus Webb's professional background inconsistency
-- Minister David Chen renamed to avoid confusion with engineer David Chen
-- Zara's age inconsistency across chapters
+- Chinese character artifacts in chapters 1, 11, 17, 21, 29, 32, 36
+- Katherine Holt's age inconsistency (chapters 18, 20, 34)
+- Marcus Webb's professional background (chapter 23)
+- Minister David Chen renamed to David Kim (chapter 17)
+- Zara's age inconsistency (chapter 27)
 
 ## [0.1.0] - 2026-07-22
 

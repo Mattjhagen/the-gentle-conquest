@@ -1,0 +1,203 @@
+/* EPUB Stylesheet for The Gentle Conquest */
+
+/* Base typography */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #1a1a1a;
+    margin: 1em;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* Headings */
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    page-break-before: always;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+/* Paragraphs */
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-indent: 0;
+}
+
+/* Emphasis */
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Block quotes */
+blockquote {
+    margin: 1em 2em;
+    padding: 0.5em 1em;
+    border-left: 3px solid #ccc;
+    font-style: italic;
+    color: #333;
+}
+
+blockquote p {
+    margin-bottom: 0.5em;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+/* Horizontal rules */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2em 0;
+    text-align: center;
+}
+
+hr::after {
+    content: "* * *";
+    display: block;
+    margin-top: -0.5em;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Chapter titles */
+h1 + h2 {
+    margin-top: 1em;
+}
+
+/* Part titles */
+.part-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    page-break-before: always;
+}
+
+/* Epigraph */
+.epigraph {
+    font-style: italic;
+    text-align: center;
+    margin: 2em 3em;
+    color: #555;
+}
+
+/* First paragraph after heading */
+h1 + p, h2 + p, h3 + p {
+    text-indent: 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
+
+/* Code (for any technical references) */
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    background-color: #f4f4f4;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+pre {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85em;
+    background-color: #f4f4f4;
+    padding: 1em;
+    overflow-x: auto;
+    border-radius: 3px;
+}
+
+/* Page breaks */
+.page-break {
+    page-break-before: always;
+}
+
+/* Tables (if any) */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Footnotes */
+.footnote {
+    font-size: 0.85em;
+    vertical-align: super;
+}
+
+/* Colors for dark mode (optional) */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e0e0e0;
+        background-color: #1a1a1a;
+    }
+    
+    a {
+        color: #e0e0e0;
+    }
+    
+    blockquote {
+        border-left-color: #555;
+        color: #ccc;
+    }
+    
+    code {
+        background-color: #2a2a2a;
+    }
+}
