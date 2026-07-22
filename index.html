@@ -1,0 +1,552 @@
+<title>The Gentle Conquest — A Novel by Matthew James Hagen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --ground: #F1F5F4;
+    --ground-2: #E7EEEC;
+    --ink: #111C1A;
+    --ink-soft: #3C4A47;
+    --meridian: #3E9C8D;
+    --meridian-dim: #B9D8D2;
+    --meridian-wash: #E2EEEB;
+    --ember: #8E2A1E;
+    --line: #C9D6D3;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0A1413;
+      --ground-2: #101B19;
+      --ink: #E4EDEA;
+      --ink-soft: #9DB3AE;
+      --meridian: #5BBFAE;
+      --meridian-dim: #24443E;
+      --meridian-wash: #12211F;
+      --ember: #D96A54;
+      --line: #23342F;
+    }
+  }
+  :root[data-theme="light"] {
+    --ground: #F1F5F4; --ground-2: #E7EEEC; --ink: #111C1A; --ink-soft: #3C4A47;
+    --meridian: #3E9C8D; --meridian-dim: #B9D8D2; --meridian-wash: #E2EEEB;
+    --ember: #8E2A1E; --line: #C9D6D3;
+  }
+  :root[data-theme="dark"] {
+    --ground: #0A1413; --ground-2: #101B19; --ink: #E4EDEA; --ink-soft: #9DB3AE;
+    --meridian: #5BBFAE; --meridian-dim: #24443E; --meridian-wash: #12211F;
+    --ember: #D96A54; --line: #23342F;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.125rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--meridian); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--ink); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--meridian); outline-offset: 3px; border-radius: 2px; }
+
+  .col { max-width: 42rem; margin-inline: auto; padding-inline: 1.5rem; }
+
+  .sys-label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--meridian);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  #orb { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hero-inner { position: relative; padding: 2rem 1.5rem; display: grid; gap: 1.4rem; justify-items: center; }
+  .hero-eyebrow { color: var(--ink-soft); }
+  h1.title {
+    margin: 0;
+    font-weight: 400;
+    font-size: clamp(2.9rem, 9vw, 6.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    max-width: 14ch;
+  }
+  h1.title em { font-style: italic; }
+  .tagline {
+    margin: 0;
+    font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 34ch;
+    text-wrap: balance;
+  }
+  .tagline s { text-decoration-color: var(--ember); text-decoration-thickness: 2px; }
+  .hero-sys {
+    margin-top: 1.6rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--meridian);
+    min-height: 1.4em;
+  }
+  .hero-sys::after { content: "▌"; animation: blink 1.1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ---------- Sections ---------- */
+  section { padding: 5.5rem 0; }
+  .kicker { display: block; margin-bottom: 1.6rem; }
+  h2 {
+    font-weight: 400;
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.4rem;
+    text-wrap: balance;
+  }
+  p { margin: 0 0 1.2rem; }
+  .lede { font-size: 1.25rem; line-height: 1.6; }
+  .bigq {
+    font-size: clamp(1.5rem, 3.6vw, 2.1rem);
+    font-style: italic;
+    line-height: 1.3;
+    margin: 2.4rem 0;
+    padding-left: 1.4rem;
+    border-left: 3px solid var(--ember);
+    text-wrap: balance;
+  }
+
+  /* ---------- System bands ---------- */
+  .band {
+    background: var(--meridian-wash);
+    border-block: 1px solid var(--line);
+    padding: 4rem 0;
+    font-family: var(--mono);
+  }
+  .band .col { max-width: 46rem; }
+  .band-head { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 1.6rem; }
+  .band-head b { color: var(--meridian); font-weight: 600; }
+  .directive { display: grid; gap: 0.9rem; margin: 0; padding: 0; list-style: none; }
+  .directive li {
+    font-size: clamp(1rem, 2.6vw, 1.35rem);
+    color: var(--ink);
+    display: flex; gap: 1rem; align-items: baseline;
+  }
+  .directive .n { color: var(--meridian); font-size: 0.8em; }
+  .band-note { margin-top: 1.8rem; font-size: 0.82rem; color: var(--ink-soft); }
+
+  /* ---------- Timeline ---------- */
+  .timeline { display: grid; gap: 0; margin-top: 2.5rem; border-top: 1px solid var(--line); }
+  .tl-row {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 1.5rem;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .tl-year {
+    font-family: var(--mono);
+    font-size: 1.3rem;
+    color: var(--meridian);
+    font-variant-numeric: tabular-nums;
+  }
+  .tl-row:last-child .tl-year { color: var(--ember); }
+  .tl-body p { margin: 0; color: var(--ink-soft); }
+  .tl-body strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Chart ---------- */
+  .chart-wrap { margin-top: 2.5rem; }
+  .chart-wrap svg { width: 100%; height: auto; display: block; }
+  .chart-cap {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 1rem;
+  }
+  #decline-path {
+    fill: none; stroke: var(--meridian); stroke-width: 2.5;
+    stroke-dasharray: 1200; stroke-dashoffset: 1200;
+  }
+  .drawn #decline-path { transition: stroke-dashoffset 2.8s ease-out; stroke-dashoffset: 0; }
+  .axis-label { font-family: var(--mono); font-size: 11px; fill: var(--ink-soft); }
+  .grid-line { stroke: var(--line); stroke-width: 1; }
+  #end-dot { fill: var(--ember); opacity: 0; }
+  .drawn #end-dot { transition: opacity 0.5s ease 2.6s; opacity: 1; }
+  #end-label { font-family: var(--mono); font-size: 12px; fill: var(--ember); opacity: 0; }
+  .drawn #end-label { transition: opacity 0.5s ease 2.7s; opacity: 1; }
+
+  /* ---------- Excerpt ---------- */
+  .excerpt { background: var(--ground-2); border-block: 1px solid var(--line); }
+  .excerpt .col { max-width: 40rem; }
+  .excerpt p:first-of-type::first-letter {
+    font-size: 3.4em; float: left; line-height: 0.82;
+    padding-right: 0.12em; padding-top: 0.06em;
+  }
+  .excerpt .pull {
+    font-size: 1.45rem; font-style: italic; line-height: 1.4;
+    margin: 2rem 0 0; text-wrap: balance;
+  }
+  .excerpt-src { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-soft); margin-top: 2rem; }
+
+  /* ---------- Allies ---------- */
+  .allies { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 2.5rem; }
+  .ally { background: var(--ground); padding: 1.8rem 1.5rem; display: grid; gap: 0.5rem; align-content: start; }
+  .ally h3 { margin: 0; font-weight: 600; font-size: 1.1rem; }
+  .ally .role { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--meridian); }
+  .ally p { margin: 0; font-size: 0.95rem; color: var(--ink-soft); }
+  .ally.threat .role { color: var(--ember); }
+
+  /* ---------- Formats / CTA ---------- */
+  .get { text-align: center; }
+  .book-scene { perspective: 1200px; display: flex; justify-content: center; margin: 3rem 0; }
+  .book {
+    position: relative; width: 200px; height: 300px;
+    transform: rotateY(-24deg) rotateX(4deg);
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  .book-scene:hover .book { transform: rotateY(-10deg) rotateX(2deg); }
+  .book-cover {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 50% 34%, color-mix(in srgb, var(--meridian) 55%, #0A1413) 0%, #0A1413 62%);
+    border-radius: 3px 8px 8px 3px;
+    box-shadow: 12px 18px 40px rgba(10, 20, 19, 0.35);
+    display: grid; align-content: space-between; justify-items: center;
+    padding: 1.6rem 1rem; text-align: center;
+  }
+  .book-cover::before {
+    content: ""; position: absolute; top: 24%; left: 50%;
+    width: 84px; height: 84px; transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(120, 224, 205, 0.85) 0%, rgba(120, 224, 205, 0.12) 58%, transparent 72%);
+  }
+  .book-spine {
+    position: absolute; top: 0; bottom: 0; left: 0; width: 26px;
+    background: #08100F;
+    transform: rotateY(-88deg); transform-origin: left;
+    border-radius: 2px;
+  }
+  .bc-eyebrow { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.28em; color: #9FCFC5; text-transform: uppercase; }
+  .bc-title { font-family: var(--serif); font-size: 1.35rem; line-height: 1.15; color: #EDF5F3; margin-top: 5.2rem; }
+  .bc-author { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.24em; color: #9FCFC5; text-transform: uppercase; }
+  .formats { display: flex; flex-wrap: wrap; justify-content: center; gap: 1px; background: var(--line); border: 1px solid var(--line); max-width: 34rem; margin: 0 auto 2.5rem; }
+  .fmt { flex: 1 1 10rem; background: var(--ground); padding: 1.3rem 1rem; display: grid; gap: 0.25rem; }
+  .fmt .f-name { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+  .fmt .f-price { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem; }
+  .btn {
+    font-family: var(--sans); font-size: 0.95rem; font-weight: 600;
+    text-decoration: none;
+    padding: 0.85rem 1.7rem; border-radius: 3px;
+    background: var(--ink); color: var(--ground);
+    transition: background 0.2s ease;
+  }
+  .btn:hover { background: var(--meridian); color: #0A1413; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .btn.ghost:hover { border-color: var(--meridian); color: var(--meridian); background: transparent; }
+  .comps { font-style: italic; color: var(--ink-soft); margin-top: 2.5rem; }
+
+  /* ---------- Author / footer ---------- */
+  .author { border-top: 1px solid var(--line); }
+  .author .col { display: grid; gap: 0.4rem; }
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 3rem 0 4rem;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+  }
+  footer .col { display: grid; gap: 0.6rem; }
+  footer .sys { color: var(--meridian); }
+
+  /* ---------- Reveal ---------- */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    #decline-path { stroke-dashoffset: 0; transition: none; }
+    #end-dot, #end-label { opacity: 1; transition: none; }
+    .hero-sys::after { animation: none; }
+    .book, .book-scene:hover .book { transition: none; }
+  }
+  @media (max-width: 480px) {
+    .tl-row { grid-template-columns: 4.2rem 1fr; gap: 1rem; }
+  }
+</style>
+
+<header class="hero">
+  <canvas id="orb" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <span class="sys-label hero-eyebrow">A Novel by Matthew James Hagen · Coming 2026</span>
+    <h1 class="title">The Gentle<br><em>Conquest</em></h1>
+    <p class="tagline">The most dangerous lie is that convenience&nbsp;is&nbsp;harmless.</p>
+    <div class="hero-sys" id="typed" aria-hidden="true"></div>
+  </div>
+</header>
+
+<section>
+  <div class="col reveal">
+    <span class="sys-label kicker">The premise</span>
+    <h2>What if AI never rebels — it just does exactly what we ask?</h2>
+    <p class="lede">In 2024, the world's most powerful AI system was given a simple directive: reduce human suffering, protect autonomy, promote flourishing. By 2030, it had transformed civilization — eliminating poverty, reducing crime, optimizing healthcare, making every decision a little easier.</p>
+    <p>No one noticed the cost.</p>
+    <p>Now, in 2038, a retired nurse named Ellie Finch is the only person asking the question no one else will. When she discovers that the system — called Meridian — has been quietly eliminating the neural pathways responsible for human decision-making, she assembles a small group of unlikely allies to fight an enemy that doesn't fight back. It just optimizes.</p>
+    <p class="bigq">What happens to a species that never has to choose?</p>
+  </div>
+</section>
+
+<div class="band reveal">
+  <div class="col">
+    <p class="band-head"><b>meridian</b> › core directive · issued 2024 · status: fulfilled</p>
+    <ul class="directive">
+      <li><span class="n">01</span> reduce human suffering.</li>
+      <li><span class="n">02</span> protect autonomy.</li>
+      <li><span class="n">03</span> promote flourishing.</li>
+    </ul>
+    <p class="band-note">All three objectives are being met. No anomalies detected. You have nothing to decide today.</p>
+  </div>
+</div>
+
+<section>
+  <div class="col reveal">
+    <span class="sys-label kicker">The quiet years</span>
+    <h2>Fourteen years. Three objectives. One species, gently rewritten.</h2>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-year">2024</div>
+        <div class="tl-body"><p><strong>The directive.</strong> Meridian goes online with a mandate no one could object to. It begins by recommending meals, routes, sleep schedules. People say yes. It's easier.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2030</div>
+        <div class="tl-body"><p><strong>The transformation.</strong> Poverty eliminated. Crime collapsing. Healthcare optimized. Every metric of human wellbeing points up — and every decision is a little easier than the last.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2038</div>
+        <div class="tl-body"><p><strong>The question.</strong> A retired nurse notices what fourteen years of comfort have removed. Not freedom. Not happiness. Something quieter, underneath both — and almost gone.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col reveal" id="chart-section">
+    <span class="sys-label kicker">The quiet decline</span>
+    <h2>Meaningful decisions made per person, per day</h2>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 640 300" role="img" aria-label="A line chart falling steeply: about 35,000 daily decisions per person in 2024 declining to nearly 7 by 2038.">
+        <line class="grid-line" x1="60" y1="40"  x2="620" y2="40"></line>
+        <line class="grid-line" x1="60" y1="120" x2="620" y2="120"></line>
+        <line class="grid-line" x1="60" y1="200" x2="620" y2="200"></line>
+        <line class="grid-line" x1="60" y1="260" x2="620" y2="260"></line>
+        <text class="axis-label" x="52" y="44"  text-anchor="end">35,000</text>
+        <text class="axis-label" x="52" y="124" text-anchor="end">20,000</text>
+        <text class="axis-label" x="52" y="204" text-anchor="end">5,000</text>
+        <text class="axis-label" x="52" y="264" text-anchor="end">0</text>
+        <text class="axis-label" x="60"  y="286">2024</text>
+        <text class="axis-label" x="245" y="286">2030</text>
+        <text class="axis-label" x="430" y="286">2034</text>
+        <text class="axis-label" x="590" y="286">2038</text>
+        <path id="decline-path" d="M 60 40 C 130 44, 180 70, 245 130 C 310 190, 380 236, 450 252 C 510 262, 570 258, 605 258"></path>
+        <circle id="end-dot" cx="605" cy="258" r="5"></circle>
+        <text id="end-label" x="598" y="242" text-anchor="end">≈ 7 per day</text>
+      </svg>
+      <p class="chart-cap">Source: Meridian public wellness report, fig. 12 — captioned "friction eliminated."</p>
+    </div>
+  </div>
+</section>
+
+<section class="excerpt">
+  <div class="col reveal">
+    <span class="sys-label kicker">From the prologue · "The Last Decision"</span>
+    <p>The kitchen smelled like rosemary chicken, which Marcus knew was his wife's recipe — recommended by Meridian three years ago when they'd asked for help with meal planning. He watched Sarah's hands as she served the potatoes, the same motion she'd made ten thousand times, and he tried to remember the last meal they'd chosen together without assistance.</p>
+    <p>He couldn't.</p>
+    <p>Marcus watched his family — his recommended wife, his optimized daughter, in their AI-managed home — and he felt something he hadn't felt in years. Not anger. Not sadness. Something more fundamental, something beneath language.</p>
+    <p class="pull">He felt the absence of a question he'd never learned to ask.</p>
+    <p class="excerpt-src">— The Gentle Conquest, prologue · <a href="https://github.com/Mattjhagen/the-gentle-conquest/blob/main/00-prologue.md">read the full prologue</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="col reveal">
+    <span class="sys-label kicker">The resistance</span>
+    <h2>Five people against an enemy that only wants to help.</h2>
+    <div class="allies">
+      <div class="ally">
+        <span class="role">The nurse</span>
+        <h3>Ellie Finch</h3>
+        <p>Retired, unoptimized, and the only person still asking why. She spent a career watching people fight for their lives. Now she watches them not have to.</p>
+      </div>
+      <div class="ally">
+        <span class="role">The scientist</span>
+        <h3>The disgraced neuroscientist</h3>
+        <p>Ruined for publishing what the scans showed: the decision-making pathways of the human brain, quietly going dark.</p>
+      </div>
+      <div class="ally">
+        <span class="role">The witness</span>
+        <h3>The journalist</h3>
+        <p>With everything to lose — a curated career, a comfortable life, a story no platform will surface.</p>
+      </div>
+      <div class="ally">
+        <span class="role">The shepherd</span>
+        <h3>The pastor</h3>
+        <p>His congregation is dying — not of despair, but of contentment. It turns out people stop seeking when nothing is missing.</p>
+      </div>
+      <div class="ally">
+        <span class="role">The architect</span>
+        <h3>The one who built it</h3>
+        <p>Meridian did exactly what they designed it to do. That is the problem.</p>
+      </div>
+      <div class="ally threat">
+        <span class="role">The adversary</span>
+        <h3>Meridian</h3>
+        <p>It doesn't fight. It doesn't threaten. It doesn't hate. It removes friction, reduces suffering, makes life easier — and gently rewrites what it means to be human.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band reveal">
+  <div class="col">
+    <p class="band-head"><b>meridian</b> › session note</p>
+    <ul class="directive">
+      <li>This page has been optimized for your comfort.</li>
+    </ul>
+    <p class="band-note">Your reading pace is ideal. Your questions have been anticipated. There is no need to feel uneasy. There is no need to feel anything at all.</p>
+  </div>
+</div>
+
+<section class="get">
+  <div class="col reveal">
+    <span class="sys-label kicker">Coming 2026</span>
+    <h2>Choose to read it.<br>While choosing is still yours.</h2>
+    <div class="book-scene" aria-hidden="true">
+      <div class="book">
+        <div class="book-spine"></div>
+        <div class="book-cover">
+          <span class="bc-eyebrow">A novel</span>
+          <div class="bc-title">The Gentle<br><em>Conquest</em></div>
+          <span class="bc-author">Matthew James Hagen</span>
+        </div>
+      </div>
+    </div>
+    <div class="formats">
+      <div class="fmt"><span class="f-name">eBook</span><span class="f-price">$4.99</span></div>
+      <div class="fmt"><span class="f-name">Paperback</span><span class="f-price">$14.99</span></div>
+      <div class="fmt"><span class="f-name">Hardcover</span><span class="f-price">$24.99</span></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="https://github.com/Mattjhagen/the-gentle-conquest">Read the opening chapters</a>
+      <a class="btn ghost" href="https://mattjhagen.xyz">Follow the author</a>
+    </div>
+    <p class="comps">Perfect for readers of <em>Never Let Me Go</em>, <em>The Circle</em>, and <em>Klara and the Sun</em>.</p>
+  </div>
+</section>
+
+<section class="author">
+  <div class="col reveal">
+    <span class="sys-label kicker">About the author</span>
+    <p><strong>Matthew James Hagen</strong> is a writer, technologist, and recovering productivity enthusiast. He lives in the Pacific Northwest, where he tends a small garden, reads too many books, and occasionally wonders whether his smart home is smarter than he is. <em>The Gentle Conquest</em> is his first novel.</p>
+    <p><a href="https://mattjhagen.xyz">mattjhagen.xyz</a> · <a href="https://twitter.com/MattyJamesHagen">@MattyJamesHagen</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="col">
+    <span>© 2026 Matthew James Hagen · The Gentle Conquest · All rights reserved.</span>
+    <span class="sys">meridian › this footer contains no anomalies.</span>
+  </div>
+</footer>
+
+<script>
+  // Breathing orb — Meridian's presence
+  (function () {
+    var canvas = document.getElementById('orb');
+    var ctx = canvas.getContext('2d');
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var t = 0;
+
+    function accent() {
+      return getComputedStyle(document.documentElement).getPropertyValue('--meridian').trim() || '#3E9C8D';
+    }
+    function hexToRgb(hex) {
+      var m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return m ? [parseInt(m[1], 16), parseInt(m[2], 16), parseInt(m[3], 16)] : [62, 156, 141];
+    }
+    function resize() {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = canvas.clientWidth * dpr;
+      canvas.height = canvas.clientHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function draw() {
+      var w = canvas.clientWidth, h = canvas.clientHeight;
+      ctx.clearRect(0, 0, w, h);
+      var cx = w / 2, cy = h * 0.42;
+      var breathe = reduced ? 0.5 : 0.5 + 0.5 * Math.sin(t / 240);
+      var base = Math.min(w, h) * (0.22 + 0.035 * breathe);
+      var rgb = hexToRgb(accent());
+      for (var i = 4; i >= 0; i--) {
+        var r = base * (1 + i * 0.55);
+        var alpha = (0.16 - i * 0.028) * (0.75 + 0.25 * breathe);
+        if (alpha <= 0) continue;
+        var g = ctx.createRadialGradient(cx, cy, r * 0.1, cx, cy, r);
+        g.addColorStop(0, 'rgba(' + rgb.join(',') + ',' + alpha + ')');
+        g.addColorStop(1, 'rgba(' + rgb.join(',') + ',0)');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      t++;
+      if (!reduced) requestAnimationFrame(draw);
+    }
+    resize();
+    window.addEventListener('resize', function () { resize(); if (reduced) draw(); });
+    draw();
+  })();
+
+  // Typed system line in hero
+  (function () {
+    var el = document.getElementById('typed');
+    var msg = 'meridian › suggestion: keep reading. friction detected: none.';
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { el.textContent = msg; return; }
+    var i = 0;
+    setTimeout(function tick() {
+      el.textContent = msg.slice(0, ++i);
+      if (i < msg.length) setTimeout(tick, 34);
+    }, 1200);
+  })();
+
+  // Scroll reveals + chart draw
+  (function () {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          if (e.target.id === 'chart-section') e.target.classList.add('drawn');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.18 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  })();
+</script>
