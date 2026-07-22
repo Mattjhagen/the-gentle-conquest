@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Build print-ready PDF for The Gentle Conquest
+# Build print-ready PDF for The Gentle Conquest (KDP Paperback)
 # Requires: pandoc, LaTeX (texlive-latex-recommended)
 
 set -e
@@ -12,7 +12,7 @@ BUILD_DIR="$PROJECT_DIR/build/output"
 # Create output directory
 mkdir -p "$BUILD_DIR"
 
-echo "Building print-ready PDF for The Gentle Conquest..."
+echo "Building print-ready PDF for The Gentle Conquest (KDP 6x9)..."
 
 # Step 1: Combine all markdown files into a single manuscript
 echo "Step 1: Combining manuscript files..."
@@ -41,31 +41,42 @@ fi
 
 echo "Combined manuscript created: $COMBINED"
 
-# Step 2: Create LaTeX template for print
+# Step 2: Create LaTeX template for KDP 6x9 paperback
 echo "Step 2: Creating LaTeX template..."
 
 LATEX_TEMPLATE="$BUILD_DIR/print-template.tex"
 cat > "$LATEX_TEMPLATE" << 'EOF'
-\documentclass[12pt,openany]{book}
+\documentclass[11pt,openany]{book}
 
-% Page geometry for 6x9 trim
-\usepackage[paperwidth=6in,paperheight=9in,top=0.75in,bottom=0.75in,inner=0.875in,outer=0.625in]{geometry}
+% KDP Paperback: 6" x 9" trim size
+\usepackage[
+    paperwidth=6in,
+    paperheight=9in,
+    top=0.75in,
+    bottom=0.75in,
+    inner=0.875in,
+    outer=0.625in
+]{geometry}
 
-% Fonts
-\usepackage{mathpazo}  % Palatino for body text
-\usepackage{microtype} % Better typography
+% Fonts - Palatino (professional book font)
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 
-% Line spacing
+% Better typography
+\usepackage{microtype}
+
+% Line spacing - 1.5 for readability
 \usepackage{setspace}
 \onehalfspacing
 
 % Chapter styling
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}
+  {\normalfont\Large\bfseries}
   {\chaptertitlename\ \thechapter}
   {20pt}
-  {\Huge}
+  {\LARGE}
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
 
 % Headers and footers
@@ -77,15 +88,19 @@ cat > "$LATEX_TEMPLATE" << 'EOF'
 \fancyhead[LO]{\textit{\leftmark}}
 \renewcommand{\headrulewidth}{0pt}
 
-% No paragraph indent, spacing between paragraphs
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.5em}
+% Paragraph formatting
+\setlength{\parindent}{0.5em}
+\setlength{\parskip}{0pt}
 
-% Links
+% Links (black for print)
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
 
-% Opening chapter
+% No orphaned chapter names
 \renewcommand{\bookname}{}
+
+% Better hyphenation
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
 
 \begin{document}
 \frontmatter
@@ -119,12 +134,32 @@ pandoc "$COMBINED" \
 
 echo "PDF created: $PDF_OUTPUT"
 
+# Step 4: Show page count
+echo ""
+echo "Step 4: Checking page count..."
+if command -v pdfinfo &> /dev/null; then
+    PAGES=$(pdfinfo "$PDF_OUTPUT" | grep Pages | awk '{print $2}')
+    echo "Page count: $PAGES"
+    if [ "$PAGES" -lt 79 ]; then
+        echo "WARNING: KDP requires minimum 79 pages for spine text"
+    fi
+else
+    echo "Install poppler-utils to check page count: sudo apt-get install poppler-utils"
+fi
+
 echo ""
 echo "Build complete!"
 echo "Output files:"
 ls -lh "$BUILD_DIR"/*.pdf 2>/dev/null || true
 echo ""
+echo "KDP Paperback Checklist:"
+echo "1. Trim size: 6\" x 9\" ✓"
+echo "2. Margins: inner=0.875\", outer=0.625\", top/bottom=0.75\" ✓"
+echo "3. Font: Palatino 11pt ✓"
+echo "4. Line spacing: 1.5 ✓"
+echo "5. No bleed (text only) ✓"
+echo ""
 echo "Next steps:"
-echo "1. Review the PDF layout"
-echo "2. Adjust page margins if needed"
-echo "3. Generate cover wrap for print"
+echo "1. Review PDF in Adobe Acrobat or similar"
+echo "2. Upload to KDP as paperback interior"
+echo "3. Generate cover wrap using KDP Cover Calculator"
