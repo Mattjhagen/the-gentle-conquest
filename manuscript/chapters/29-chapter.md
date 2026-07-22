@@ -74,7 +74,7 @@ Elena paused. She listened to the silence—the real silence, the kind that exis
 
 ## III.
 
-Marcus came through the door at half past one, and when he saw the room—the kitchen table with its mismatched chairs, the window overlooking the oak, the two women sitting with coffee between them—he stopped in the doorway and stood very still, the way a man stands when he has entered a place he has been imagining for a long time and has just realized that the reality of it is both smaller and more significant than the想象ination.
+Marcus came through the door at half past one, and when he saw the room—the kitchen table with its mismatched chairs, the window overlooking the oak, the two women sitting with coffee between them—he stopped in the doorway and stood very still, the way a man stands when he has entered a place he has been imagining for a long time and has just realized that the reality of it is both smaller and more significant than the imagination.
 
 He was sixty-eight. The years had done their work on him—not unkindly, but thoroughly, the way years do. His face was lean, lined, the face of a man who had spent his life thinking about things that most people preferred not to think about. His white hair was longer than it had been, uncombed, the hair of a man who had stopped caring about the particular performance of professionalism that academia demanded. He wore a dark jacket over a collarless shirt, and he carried a paper bag that contained, he would later explain, five copies of his book that he'd brought as gifts, because giving someone a book you'd written was, in his view, the most honest form of vanity.
 

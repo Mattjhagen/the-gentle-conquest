@@ -42,7 +42,7 @@ They had heard about it. Not from a recommendation system — not from the quiet
 
 "*What We Choose*," the old woman said. "By Eleanor Finch. She wrote it fifty years ago. It's not digitized. It's not online. It's not recommended. It's just there. On a shelf. Waiting for someone to find it."
 
-The reader's fingers moved through the catalog cards. Finch, Eleanor. The card was there — handwritten, in a script that was neither elegant nor潦草, but simply human, the handwriting of a person who had written a card and filed it and moved on to the next task. The card read:
+The reader's fingers moved through the catalog cards. Finch, Eleanor. The card was there — handwritten, in a script that was neither elegant nor hasty, but simply human, the handwriting of a person who had written a card and filed it and moved on to the next task. The card read:
 
 *Finch, Eleanor. What We Choose. 1941-2029. Savannah, Georgia. Published: self, 2042. One copy. Donated 2051. Location: Shelf 7, Section C.*
 

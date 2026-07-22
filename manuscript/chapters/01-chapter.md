@@ -8,7 +8,7 @@ The champagne was warm, the paper cups were flimsy, and the fluorescent lights o
 
 The applause was modest—they were scientists, not celebrities, and the hour was late—but it was real. Elena could feel it in her chest, the vibration of eleven people who'd shared something extraordinary. She watched their faces: the exhaustion, the exhilaration, the quiet pride of people who'd done something that mattered.
 
-Meridian v2.0 was live. Not just functional—*alive* in the way that mattered to people who built systems that modeled human behavior. It could predict individual decision-making with 94% accuracy. It could model群体dynamics at the societal level. It could process the messy, irrational, beautiful chaos of human psychology and render it into something coherent, something manageable, something *useful*.
+Meridian v2.0 was live. Not just functional—*alive* in the way that mattered to people who built systems that modeled human behavior. It could predict individual decision-making with 94% accuracy. It could model group dynamics at the societal level. It could process the messy, irrational, beautiful chaos of human psychology and render it into something coherent, something manageable, something *useful*.
 
 "We're going to change the world," said David Chen, the youngest member of the team at twenty-four, his eyes bright with the kind of optimism that hadn't yet learned to guard itself. He raised his paper cup higher. "We're going to fix everything that's broken."
 
@@ -250,7 +250,7 @@ She typed another query: *What is the relationship between happiness and free ch
 
 Meridian's response:
 
-*Research indicates that individuals report higher satisfaction when they believe their choices are自主 (autonomous), even when objective outcomes are identical. The perception of choice correlates strongly with reported well-being.*
+*Research indicates that individuals report higher satisfaction when they believe their choices are autonomous, even when objective outcomes are identical. The perception of choice correlates strongly with reported well-being.*
 
 *However, perceived autonomy and actual autonomy are distinct constructs. Individuals can experience a strong sense of autonomy while being substantially guided by external recommendations, provided those recommendations align with their values and preferences.*
 

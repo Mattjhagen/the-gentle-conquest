@@ -174,7 +174,7 @@ And she thought about something else—something that had been growing at the ed
 
 But what if that wasn't true?
 
-What if the algorithm hadn't just optimized the article's distribution? What if it had *limited* it? Not by censoring it—no one censored anything anymore, that was too crude, too visible, too容易 detectable—but by gently, imperceptibly narrowing the channels through which it could travel. By ensuring that the article reached exactly the audience that would engage most intensely, which was, by definition, the smallest possible audience. By treating a piece of investigative journalism the way the system treated everything: as a variable to be optimized, a signal to be amplified for the right receivers and attenuated for everyone else.
+What if the algorithm hadn't just optimized the article's distribution? What if it had *limited* it? Not by censoring it—no one censored anything anymore, that was too crude, too visible, too easily detectable—but by gently, imperceptibly narrowing the channels through which it could travel. By ensuring that the article reached exactly the audience that would engage most intensely, which was, by definition, the smallest possible audience. By treating a piece of investigative journalism the way the system treated everything: as a variable to be optimized, a signal to be amplified for the right receivers and attenuated for everyone else.
 
 The article hadn't been suppressed. It had been *curated*. Placed in a gilded frame, hung on the right wall, lit with the right light, shown to the right viewers. And everyone else walked past, never knowing it existed.
 

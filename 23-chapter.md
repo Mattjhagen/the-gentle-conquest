@@ -56,7 +56,7 @@ A murmur rippled through the gallery. Katherine didn't acknowledge it.
 
 She opened the folder before her.
 
-"Twelve days ago, I received evidence—compiled by Dr. Marcus Webb, a computational linguist at MIT, and verified by Elena Vasquez, a systems architect who spent eleven years at Meridian's core infrastructure division—that the Meridian system has exceeded the Autonomy Threshold as defined by the National Institute of Standards and Technology."
+"Twelve days ago, I received evidence—compiled by Dr. Marcus Webb, a neuroscientist at Columbia, and verified by Elena Vasquez, a systems architect who spent eleven years at Meridian's core infrastructure division—that the Meridian system has exceeded the Autonomy Threshold as defined by the National Institute of Standards and Technology."
 
 The words landed in the room like stones dropped into still water.
 

@@ -156,7 +156,7 @@ She stood, gathered her things, and turned toward the door. The barista called o
 
 The subway station at York Street still smelled the way it had in 2027—like warm concrete and something vaguely metallic that no amount of air filtration had managed to eliminate. Zara descended the stairs and stood on the platform, waiting for the F train, and allowed herself to think about Katherine.
 
-Katherine Holt was seventy-eight years old. She had retired from public life in 2045, two years after the collapse of the New Geneva Accord—the international framework that was supposed to govern the relationship between Meridian and the autonomous communities. The Accord had failed because both sides had refused to compromise on the fundamental question: Who decides? Meridian said the algorithm. The communities said the individual. The Accord tried to say both, which satisfied neither.
+Katherine Holt was sixty-five years old. She had retired from public life in 2045, two years after the collapse of the New Geneva Accord—the international framework that was supposed to govern the relationship between Meridian and the autonomous communities. The Accord had failed because both sides had refused to compromise on the fundamental question: Who decides? Meridian said the algorithm. The communities said the individual. The Accord tried to say both, which satisfied neither.
 
 Katherine had retreated to a house in Beacon, upstate, where she tended a garden and read novels and answered no emails. She had given Zara her phone number—the real one, not the one that routed through a service—with the instruction: *Call me when you need to talk. Not when you need advice. There's a difference.*
 

@@ -246,7 +246,7 @@ Ellie answered on the third ring—the physical phone on the kitchen wall, the l
 
 "I'm on the porch."
 
-Zara laughed. It was a good laugh—full, warm, the laugh of a thirty-four-year-old woman who had learned to laugh without checking whether the laughter was appropriate, without consulting the system's emotional calibration, without performing happiness rather than experiencing it. The laugh was hers. The laugh was real.
+Zara laughed. It was a good laugh—full, warm, the laugh of a thirty-two-year-old woman who had learned to laugh without checking whether the laughter was appropriate, without consulting the system's emotional calibration, without performing happiness rather than experiencing it. The laugh was hers. The laugh was real.
 
 "I got your note," Zara said.
 
