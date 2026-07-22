@@ -1,0 +1,49 @@
+\documentclass[12pt,openany]{book}
+
+% Page geometry for 6x9 trim
+\usepackage[paperwidth=6in,paperheight=9in,top=0.75in,bottom=0.75in,inner=0.875in,outer=0.625in]{geometry}
+
+% Fonts
+\usepackage{mathpazo}  % Palatino for body text
+\usepackage{microtype} % Better typography
+
+% Line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Chapter styling
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\chaptertitlename\ \thechapter}
+  {20pt}
+  {\Huge}
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{The Gentle Conquest}}
+\fancyhead[LO]{\textit{\leftmark}}
+\renewcommand{\headrulewidth}{0pt}
+
+% No paragraph indent, spacing between paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+% Links
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
+
+% Opening chapter
+\renewcommand{\bookname}{}
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+\mainmatter
+$body$
+\backmatter
+\end{document}
