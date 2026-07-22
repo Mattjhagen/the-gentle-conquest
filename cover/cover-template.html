@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gentle Conquest - Cover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1600px;
+            height: 2560px;
+            background: linear-gradient(180deg, #FAFAFA 0%, #F0F0F0 50%, #E8E8E8 100%);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Subtle texture overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(76, 175, 80, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(76, 175, 80, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .cover {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 180px 120px 160px;
+            position: relative;
+        }
+
+        /* Title Section */
+        .title-section {
+            text-align: center;
+            z-index: 10;
+        }
+
+        .title {
+            font-size: 142px;
+            font-weight: 200;
+            letter-spacing: 28px;
+            color: #1A1A1A;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+
+        .subtitle {
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 18px;
+            color: #666666;
+            text-transform: uppercase;
+        }
+
+        /* Central Image Area */
+        .image-area {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        /* The Crack */
+        .crack {
+            position: absolute;
+            width: 8px;
+            height: 400px;
+            background: linear-gradient(180deg, 
+                transparent 0%, 
+                #D0D0D0 10%, 
+                #C0C0C0 50%, 
+                #D0D0D0 90%, 
+                transparent 100%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .crack::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                transparent 0%, 
+                #A0A0A0 20%, 
+                #909090 50%, 
+                #A0A0A0 80%, 
+                transparent 100%);
+            left: 2px;
+        }
+
+        /* The Plant */
+        .plant {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 300px;
+        }
+
+        .stem {
+            position: absolute;
+            width: 6px;
+            height: 180px;
+            background: linear-gradient(180deg, #4CAF50 0%, #388E3C 100%);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .leaf {
+            position: absolute;
+            width: 80px;
+            height: 40px;
+            background: linear-gradient(135deg, #66BB6A 0%, #43A047 50%, #2E7D32 100%);
+            border-radius: 0 50% 50% 0;
+            transform-origin: left center;
+        }
+
+        .leaf.left {
+            right: 50%;
+            transform: rotate(-30deg);
+            border-radius: 50% 0 0 50%;
+            background: linear-gradient(225deg, #66BB6A 0%, #43A047 50%, #2E7D32 100%);
+        }
+
+        .leaf.right {
+            left: 50%;
+            transform: rotate(30deg);
+        }
+
+        .leaf-1 { bottom: 140px; }
+        .leaf-2 { bottom: 100px; transform: rotate(-20deg); }
+        .leaf-2.right { transform: rotate(20deg); }
+        .leaf-3 { bottom: 60px; transform: rotate(-40deg); }
+        .leaf-3.right { transform: rotate(40deg); }
+
+        .bud {
+            position: absolute;
+            width: 24px;
+            height: 32px;
+            background: linear-gradient(180deg, #81C784 0%, #4CAF50 100%);
+            border-radius: 50% 50% 40% 40%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* The Hand */
+        .hand {
+            position: absolute;
+            bottom: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            height: 280px;
+        }
+
+        .finger {
+            position: absolute;
+            background: linear-gradient(180deg, #E8C4A8 0%, #D4A574 100%);
+            border-radius: 20px 20px 15px 15px;
+        }
+
+        .finger.thumb {
+            width: 45px;
+            height: 120px;
+            left: 20px;
+            bottom: 40px;
+            transform: rotate(25deg);
+        }
+
+        .finger.index {
+            width: 40px;
+            height: 160px;
+            left: 80px;
+            bottom: 60px;
+            transform: rotate(8deg);
+        }
+
+        .finger.middle {
+            width: 40px;
+            height: 170px;
+            left: 130px;
+            bottom: 55px;
+            transform: rotate(2deg);
+        }
+
+        .finger.ring {
+            width: 38px;
+            height: 155px;
+            left: 180px;
+            bottom: 50px;
+            transform: rotate(-4deg);
+        }
+
+        .finger.pinky {
+            width: 35px;
+            height: 130px;
+            left: 225px;
+            bottom: 45px;
+            transform: rotate(-12deg);
+        }
+
+        .palm {
+            position: absolute;
+            width: 200px;
+            height: 120px;
+            background: linear-gradient(180deg, #E0B898 0%, #D4A574 100%);
+            border-radius: 30px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Author Section */
+        .author-section {
+            text-align: center;
+            z-index: 10;
+        }
+
+        .author {
+            font-size: 52px;
+            font-weight: 300;
+            letter-spacing: 24px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+        }
+
+        /* Decorative elements */
+        .decorative-line {
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #999, transparent);
+            margin: 40px auto;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <div class="title-section">
+            <h1 class="title">The Gentle<br>Conquest</h1>
+            <div class="decorative-line"></div>
+            <p class="subtitle">A Novel</p>
+        </div>
+
+        <div class="image-area">
+            <div class="crack"></div>
+            
+            <div class="plant">
+                <div class="bud"></div>
+                <div class="leaf left leaf-1"></div>
+                <div class="leaf right leaf-1"></div>
+                <div class="leaf left leaf-2"></div>
+                <div class="leaf right leaf-2"></div>
+                <div class="leaf left leaf-3"></div>
+                <div class="leaf right leaf-3"></div>
+                <div class="stem"></div>
+            </div>
+
+            <div class="hand">
+                <div class="finger thumb"></div>
+                <div class="finger index"></div>
+                <div class="finger middle"></div>
+                <div class="finger ring"></div>
+                <div class="finger pinky"></div>
+                <div class="palm"></div>
+            </div>
+        </div>
+
+        <div class="author-section">
+            <div class="decorative-line"></div>
+            <p class="author">Matt Jhagen</p>
+        </div>
+    </div>
+</body>
+</html>
