@@ -4,9 +4,9 @@
 
 - **Title:** The Gentle Conquest
 - **Subtitle:** A Novel
-- **Author:** Matt Jhagen
-- **Series:** Standalone (no series)
-- **Volume:** N/A
+- **Author:** Matthew James Hagen (published as Matt Jhagen)
+- **Series:** The Gentle Conquest
+- **Volume:** 1
 
 ## Publication Details
 
