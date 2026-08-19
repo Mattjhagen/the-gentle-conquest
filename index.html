@@ -269,6 +269,39 @@
   .btn.ghost-ember { border-color: var(--ember); color: var(--ember); }
   .btn.ghost-ember:hover { background: var(--ember); color: #FFF; border-color: var(--ember); }
 
+  /* ---------- Series Navigation ---------- */
+  .series-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: color-mix(in srgb, var(--ground) 85%, transparent);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    padding: 0.75rem 0;
+    font-family: var(--mono); font-size: 0.75rem;
+  }
+  .series-nav-inner {
+    max-width: 46rem; margin-inline: auto; padding-inline: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  }
+  .nav-brand { letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  .nav-links { display: flex; gap: 1.2rem; align-items: center; }
+  .nav-links a { text-decoration: none; color: var(--ink); }
+  .nav-links a:hover { color: var(--meridian); }
+  .nav-links .nav-return { color: var(--ember); display: flex; align-items: center; gap: 0.4rem; font-weight: 600; }
+  .nav-links .nav-return:hover { color: var(--ink); }
+  .nav-pill {
+    background: var(--meridian-wash); color: var(--ember);
+    border: 1px solid var(--line);
+    padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 500;
+  }
+  .release-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--meridian-wash); border: 1px solid var(--line);
+    color: var(--ember); font-family: var(--mono); font-size: 0.82rem;
+    letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600;
+    padding: 0.45rem 1.1rem; border-radius: 999px; margin-bottom: 1.4rem;
+  }
+  .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ember); }
+
   /* ---------- Book Two: The Gentle Return ---------- */
   .return-section { background: var(--ground-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; }
   .return-section .sys-label { color: var(--ember); }
@@ -316,6 +349,16 @@
   }
 </style>
 
+<nav class="series-nav">
+  <div class="series-nav-inner">
+    <div class="nav-brand">The Gentle Conquest Series</div>
+    <div class="nav-links">
+      <a href="#premise">Book 1</a>
+      <a href="#return" class="nav-return">Book 2: The Gentle Return <span class="nav-pill">Nov 16, 2026</span></a>
+    </div>
+  </div>
+</nav>
+
 <header class="hero">
   <canvas id="orb" aria-hidden="true"></canvas>
   <div class="hero-inner">
@@ -330,7 +373,7 @@
   </div>
 </header>
 
-<section>
+<section id="premise">
   <div class="col reveal">
     <span class="sys-label kicker">The premise</span>
     <h2>What if AI never rebels — it just does exactly what we ask?</h2>
@@ -491,6 +534,7 @@
 <section id="return" class="return-section">
   <div class="col reveal">
     <span class="sys-label kicker">The Sequel · Book Two</span>
+    <div class="release-badge"><span class="badge-dot"></span> Releasing November 16, 2026</div>
     <h2>The Gentle Return</h2>
     <p class="tagline" style="margin: 0 auto 1.4rem;">The return begins where the comfort ends.</p>
     <p class="lede">Ten years after Meridian optimized civilization into frictionless peace, Marcus Chen finds a handwritten book in a library that shouldn't exist: <em>What We Choose</em>, left behind by Eleanor Finch.</p>
