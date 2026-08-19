@@ -24,7 +24,7 @@ Matt Jhagen is a writer, technologist, and recovering productivity enthusiast. H
 
 ## Also by the Author
 
-*None yet.*
+*The Gentle Return* (The Gentle Conquest Series, Book 2) — [thegentlecon.quest](https://thegentlecon.quest) | [Amazon](https://amazon.com)
 
 ---
 
