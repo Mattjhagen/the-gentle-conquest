@@ -264,6 +264,26 @@
   .btn:hover { background: var(--meridian); color: #0A1413; }
   .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
   .btn.ghost:hover { border-color: var(--meridian); color: var(--meridian); background: transparent; }
+  .btn-ember { background: var(--ember); color: #FFF; }
+  .btn-ember:hover { background: var(--ink); color: var(--ground); }
+  .btn.ghost-ember { border-color: var(--ember); color: var(--ember); }
+  .btn.ghost-ember:hover { background: var(--ember); color: #FFF; border-color: var(--ember); }
+
+  /* ---------- Book Two: The Gentle Return ---------- */
+  .return-section { background: var(--ground-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; }
+  .return-section .sys-label { color: var(--ember); }
+  .book-return .book-cover {
+    background: radial-gradient(circle at 50% 34%, color-mix(in srgb, var(--ember) 60%, #150205) 0%, #150205 65%);
+    box-shadow: 12px 18px 40px rgba(35, 5, 10, 0.4);
+  }
+  .book-return .book-cover::before {
+    background: radial-gradient(circle, rgba(240, 95, 85, 0.85) 0%, rgba(240, 95, 85, 0.15) 58%, transparent 72%);
+  }
+  .book-return .book-spine { background: #0D0103; }
+  .book-return .bc-eyebrow { color: #F2A89F; }
+  .book-return .bc-title { color: #FCEEDD; }
+  .book-return .bc-author { color: #F2A89F; }
+  .return-quote { font-size: clamp(1.2rem, 2.8vw, 1.55rem); font-style: italic; color: var(--ember); margin: 1.8rem 0; text-wrap: balance; }
   .comps { font-style: italic; color: var(--ink-soft); margin-top: 2.5rem; }
 
   /* ---------- Author / footer ---------- */
@@ -302,7 +322,10 @@
     <span class="sys-label hero-eyebrow">A Novel by Matthew James Hagen · Coming 2026</span>
     <h1 class="title">The Gentle<br><em>Conquest</em></h1>
     <p class="tagline">The most dangerous lie is that convenience&nbsp;is&nbsp;harmless.</p>
-    <div class="cta-row"><a class="btn" href="chapter-1.html">Read Chapter 1 — Sneak Peek</a></div>
+    <div class="cta-row">
+      <a class="btn" href="chapter-1.html">Read Chapter 1 — Sneak Peek</a>
+      <a class="btn ghost" href="#return">Book Two: The Gentle Return &darr;</a>
+    </div>
     <div class="hero-sys" id="typed" aria-hidden="true"></div>
   </div>
 </header>
@@ -465,6 +488,39 @@
   </div>
 </section>
 
+<section id="return" class="return-section">
+  <div class="col reveal">
+    <span class="sys-label kicker">The Sequel · Book Two</span>
+    <h2>The Gentle Return</h2>
+    <p class="tagline" style="margin: 0 auto 1.4rem;">The return begins where the comfort ends.</p>
+    <p class="lede">Ten years after Meridian optimized civilization into frictionless peace, Marcus Chen finds a handwritten book in a library that shouldn't exist: <em>What We Choose</em>, left behind by Eleanor Finch.</p>
+    <p>Marcus starts asking questions the system cannot answer. He gathers people who remember what it felt like to choose &mdash; to struggle, to fail, to cook bad food, to grow irregular vegetables, to be completely and beautifully unoptimized.</p>
+    <p class="return-quote">&ldquo;The gentlest surrender is the one you call freedom.&rdquo;</p>
+    
+    <div class="book-scene" aria-hidden="true">
+      <div class="book book-return">
+        <div class="book-spine"></div>
+        <div class="book-cover">
+          <span class="bc-eyebrow">Book Two</span>
+          <div class="bc-title">The Gentle<br><em>Return</em></div>
+          <span class="bc-author">Matthew James Hagen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="formats">
+      <div class="fmt"><span class="f-name">eBook</span><span class="f-price">$4.99</span></div>
+      <div class="fmt"><span class="f-name">Paperback</span><span class="f-price">$14.99</span></div>
+      <div class="fmt"><span class="f-name">Hardcover</span><span class="f-price">$24.99</span></div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-ember" href="return-chapter-1.html">Read Chapter 1: The Reader &mdash; Sneak Peek</a>
+      <a class="btn ghost ghost-ember" href="https://github.com/Mattjhagen/The-Gentle-Return">Explore on GitHub &rarr;</a>
+    </div>
+  </div>
+</section>
+
 <section class="author">
   <div class="col reveal">
     <span class="sys-label kicker">About the author</span>
@@ -475,7 +531,7 @@
 
 <footer>
   <div class="col">
-    <span>© 2026 Matthew James Hagen · The Gentle Conquest · All rights reserved.</span>
+    <span>© 2026 Matthew James Hagen · The Gentle Conquest Series · All rights reserved.</span>
     <span class="sys">meridian › this footer contains no anomalies.</span>
   </div>
 </footer>
